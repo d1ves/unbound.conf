@@ -22,11 +22,11 @@
 
 |               32位          |               64位          |             解压到          |
 |-----------------------------|-----------------------------|-----------------------------|
-|[dnscrypt-proxy-win32-full-1.9.4.zip](https://download.dnscrypt.org/dnscrypt-proxy/dnscrypt-proxy-win32-full-1.9.4.zip)|[dnscrypt-proxy-win64-full-1.9.4.zip](https://download.dnscrypt.org/dnscrypt-proxy/dnscrypt-proxy-win64-full-1.9.4.zip)|`C:\localdns\dnscrypt-proxy\`|
+|[dnscrypt-proxy-win32-full-1.9.5.zip](https://download.dnscrypt.org/dnscrypt-proxy/dnscrypt-proxy-win32-full-1.9.5.zip)|[dnscrypt-proxy-win64-full-1.9.5.zip](https://download.dnscrypt.org/dnscrypt-proxy/dnscrypt-proxy-win64-full-1.9.5.zip)|`C:\localdns\dnscrypt-proxy\`|
 |[unbound-1.6.2-w32.zip](https://www.unbound.net/downloads/unbound-1.6.2-w32.zip)|[unbound-1.6.2.zip](https://www.unbound.net/downloads/unbound-1.6.2.zip)|`C:\localdns\unbound\`|
 |[nircmd.zip](http://www.nirsoft.net/utils/nircmd.zip)|[nircmd-x64.zip](http://www.nirsoft.net/utils/nircmd-x64.zip)|`C:\localdns\`|
 |[wget-1.11.4-x86.zip](http://nebm.ist.utl.pt/~glopes/wget/wget-1.11.4-x86.zip)|[wget-1.11.4-x64.zip](http://nebm.ist.utl.pt/~glopes/wget/wget-1.11.4-x64.zip)|`C:\localdns\`|
-|[BIND9.11.0-P5.x86.zip](https://ftp.isc.org/isc/bind9/cur/9.11/BIND9.11.0-P5.x86.zip)|[BIND9.11.0-P5.x64.zip](https://ftp.isc.org/isc/bind9/cur/9.11/BIND9.11.0-P5.x64.zip)|`C:\localdns\bind9\`|
+|[BIND9.11.1.x86.zip](https://ftp.isc.org/isc/bind9/cur/9.11/BIND9.11.1.x86.zip)|[BIND9.11.1.x64.zip](https://ftp.isc.org/isc/bind9/cur/9.11/BIND9.11.1.x64.zip)|`C:\localdns\bind9\`|
 
 * 下载[配置文件](https://github.com/CNMan/unbound.conf/archive/master.zip)，解压`unbound`目录中的文件到`C:\localdns\unbound\`，解压`dnscrypt-proxy`目录中的文件到`C:\localdns\dnscrypt-proxy\`
 
@@ -102,9 +102,9 @@ ipconfig /flushdns
 ## dnscrypt-proxy 命令行参数
 
 ```
-dnscrypt-proxy 1.9.4
+dnscrypt-proxy 1.9.5
 
-Compilation date: Jan 21 2017
+Compilation date: May  7 2017
 Support for plugins: present
 Support for ldns-based plugins: present
 Support for the XChaCha20-Poly1305 cipher: present
@@ -303,6 +303,7 @@ Where:  domain	  is in the Domain Name System
                  +[no]fail           (Don't try next server on SERVFAIL)
                  +[no]header-only    (Send query without a question section)
                  +[no]identify       (ID responders in short answers)
+                 +[no]idnout         (convert IDN response)
                  +[no]ignore         (Don't revert to TCP for TC responses.)
                  +[no]keepopen       (Keep the TCP socket open between queries)
                  +[no]mapped         (Allow mapped IPv4 over IPv6)
